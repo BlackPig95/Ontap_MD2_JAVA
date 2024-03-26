@@ -24,12 +24,22 @@ public class Bai9
             System.out.println("Nhập phần tử thứ " + (i + 1));
             bai9Array[i] = Integer.parseInt(scanner.nextLine());
         }
-        System.out.println("Nhập vị trí muốn xóa");
-        int deleteIndex = Integer.parseInt(scanner.nextLine());
+        int deleteIndex = 0;
+        while (true)
+        {
+            System.out.println("Nhập vị trí muốn xóa");
+            deleteIndex = Integer.parseInt(scanner.nextLine());
+            if (deleteIndex < 0 || deleteIndex > n - 1)
+            {
+                System.out.println("Vui lòng nhập chỉ mục trong phạm vi của mảng");
+            } else break;
+        }
         for (int i = deleteIndex; i < n - 1; i++)
         {   //Shift element sang trái
             bai9Array[i] = bai9Array[i + 1];
         }
         bai9Array[n - 1] = 0;//Set giá trị cuối cùng trong mảng về default value
+        for (int i : bai9Array)
+            System.out.print(i + " ");
     }
 }

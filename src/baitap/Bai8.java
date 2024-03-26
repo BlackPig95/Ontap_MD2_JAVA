@@ -25,10 +25,20 @@ public class Bai8
             System.out.println("Nhập phần tử thứ " + (i + 1));
             bai8Array[i] = Integer.parseInt(scanner.nextLine());
         }
-        System.out.println("Nhập vị trí muốn thay đổi");
-        int updateIndex = Integer.parseInt(scanner.nextLine());
+        int updateIndex = 0;
+        while (true)
+        {
+            System.out.println("Nhập vị trí muốn thay đổi");
+            updateIndex = Integer.parseInt(scanner.nextLine());
+            if (updateIndex < 0 || updateIndex > n - 1)
+            {
+                System.out.println("Vui lòng nhập chỉ mục trong phạm vi của mảng");
+            } else break;
+        }
         System.out.println("Nhập giá trị muốn thay đổi");
         int updateValue = Integer.parseInt(scanner.nextLine());
         bai8Array[updateIndex] = updateValue;
+        for (int i : bai8Array)
+            System.out.print(i + " ");
     }
 }
