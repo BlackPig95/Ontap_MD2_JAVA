@@ -45,10 +45,10 @@ public class Bai5
             }
         }
         System.out.println("Tổng của các phần tử chẵn trong mảng: " + sumDouble);
-        System.out.println("Tổng các phần tử chẵn: " +
-                Arrays.stream(bai5Array).flatMapToDouble(rows ->
-                                Arrays.stream(rows)).filter(num -> num % 2 == 0).
-                        reduce(0, (accumulator, num) -> accumulator + num));
+//        System.out.println("Tổng các phần tử chẵn: " +
+//                Arrays.stream(bai5Array).flatMapToDouble(rows ->
+//                                Arrays.stream(rows)).filter(num -> num % 2 == 0).
+//                        reduce(0, (accumulator, num) -> accumulator + num));
 //        System.out.println("Tổng các phần tử chẵn: " +
 //                Arrays.stream(bai5Array).flatMapToDouble(Arrays::stream).filter(num -> num % 2 == 0).
 //                        reduce(0, Double::sum));

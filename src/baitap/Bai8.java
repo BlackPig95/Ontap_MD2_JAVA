@@ -25,7 +25,7 @@ public class Bai8
             System.out.println("Nhập phần tử thứ " + (i + 1));
             bai8Array[i] = Integer.parseInt(scanner.nextLine());
         }
-        int updateIndex = 0;
+        int updateIndex;
         while (true)
         {
             System.out.println("Nhập vị trí muốn thay đổi");

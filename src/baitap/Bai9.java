@@ -38,8 +38,11 @@ public class Bai9
         {   //Shift element sang trái
             bai9Array[i] = bai9Array[i + 1];
         }
-        bai9Array[n - 1] = 0;//Set giá trị cuối cùng trong mảng về default value
-        for (int i : bai9Array)
-            System.out.print(i + " ");
+        int[] newArray = new int[n - 1];//Tạo mảng mới, giảm số phần tử đi 1
+        for (int i = 0; i < n - 1; i++)//Copy các phần tử của mảng cũ sang mảng mới
+        {
+            newArray[i] = bai9Array[i];
+            System.out.print(newArray[i] + " ");
+        }
     }
 }
